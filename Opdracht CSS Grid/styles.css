@@ -1,0 +1,67 @@
+* {
+    color:#FFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:600;
+}
+
+body {
+    display:grid;
+    grid-gap:3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 12.5% auto 12.5%;
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "m m m m m m m m m m m m"
+    "w w w w w w w w w w w w"
+    "f f f f f f f f f f f f";
+}
+
+.site-header {
+    background-color:blue;
+    padding:20px 20px;
+    grid-area: h;
+}
+
+.site-main {
+    background-color:green;
+    padding:120px 20px;
+    height:600px;
+    grid-area: m;
+}
+
+.widget-area {
+    background-color:pink;
+    padding:60px 20px;
+    grid-area: w;
+}
+
+.site-footer {
+    background-color:purple;
+    padding:40px 20px;
+    grid-area: f;
+}
+
+/* DESKTOP */
+
+@media screen and (min-width:769px) {
+    body {
+        display:grid;
+        grid-template-areas: 
+        "h m m m m m m m m m m m"
+        "h m m m m m m m m m m m"
+        "h w w w w w w w w w w w"
+        "h f f f f f f f f f f f";
+    }
+}
+
+/* DESKTOP XL */
+
+@media screen and (min-width:1920px) {
+    body {
+        grid-template-areas: 
+        "h m m m m m m m m m m w"
+        "h m m m m m m m m m m w"
+        "h m m m m m m m m m m w"
+        "h f f f f f f f f f f w";
+    }
+}
